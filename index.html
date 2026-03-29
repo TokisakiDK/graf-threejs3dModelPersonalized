@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITP - Visor de Modelos 3D FBX</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <h2>Práctica 3.2</h2>
+            <p>Graficación - David Ramirez</p>
+            
+            <a href="htmlModels/webgl_loader_fbx_Dancing_Twerk.html" target="visor" class="menu-btn active">🕺 Dancing Twerk</a>
+            <a href="htmlModels/webgl_loader_fbx_Flair.html" target="visor" class="menu-btn">✨ Flair Dancing</a>
+            <a href="htmlModels/webgl_loader_fbx_Rumba_Dancing.html" target="visor" class="menu-btn">💃 Rumba Dancing</a>
+            <a href="htmlModels/webgl_loader_fbx_Samba_Dancing.html" target="visor" class="menu-btn">🎶 Samba Dancing</a>
+            <a href="htmlModels/webgl_loader_fbx_Silly_Dancing.html" target="visor" class="menu-btn">🤪 Silly Dancing</a>
+            <a href="htmlModels/webgl_loader_fbx_Elmo.html" target="visor" class="menu-btn">🔴 Elmo Especial</a>
+
+            <div class="footer-info">
+                Instituto Tecnológico de Pachuca<br>
+                Ing. Sistemas Computacionales
+            </div>
+        </nav>
+
+        <main class="content">
+            <iframe name="visor" src="htmlModels/webgl_loader_fbx_Dancing_Twerk.html"></iframe>
+        </main>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.menu-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
